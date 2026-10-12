@@ -64,3 +64,5 @@ const students = [
       "Esther is a motivated and resourceful student who enjoys discovering new concepts, taking on challenges, and applying what she learns to practical projects.",
   },
 ];
+
+export { students };
