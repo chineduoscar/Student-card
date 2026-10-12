@@ -9,7 +9,10 @@ const Home = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {students.map((element) => (
-            <div className="bg-white rounded-2xl p-6 shadow-md border border-gray-100">
+            <div
+              key={element.id}
+              className="bg-white rounded-2xl p-6 shadow-md border border-gray-100"
+            >
               <h2 className="text-xl font-bold text-gray-800">
                 {element.name}
               </h2>
@@ -21,7 +24,7 @@ const Home = () => {
                 </span>
               </p>
 
-              <Link to={"/student"}>
+              <Link to={`/student/${element.id}`}>
                 <button className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-xl cursor-pointer">
                   Read more about {element.name}→
                 </button>
